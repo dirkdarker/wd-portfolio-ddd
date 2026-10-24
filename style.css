@@ -162,10 +162,18 @@ section { overflow-x: clip; }
 .fd-skills  { --s: min(36vw, 440px); --r: -20deg; right: -9vw; top: -3rem; }
 .fd-edu-l   { --s: min(30vw, 360px); --r: 10deg;  left: -9vw;  top: 8%; }
 .fd-edu-r   { --s: min(18vw, 210px); --r: -28deg; right: 4vw;  bottom: 1rem; opacity: .35; }
-.fd-contact { --s: min(38vw, 460px); --r: 24deg;  right: -10vw; bottom: -8rem; }
+.fd-contact { --s: min(38vw, 460px); --r: 24deg;  left: -11vw; top: 2rem; }
+
+
+/* Education: inverted (dark) like WORKfolio */
+#education { background: var(--dark); color: var(--on-dark); }
+#education ::selection { background: var(--on-dark); color: var(--dark); }
+#education .entry p { color: var(--on-dark); opacity: .72; }
+#education .flower-deco { color: var(--on-dark); mix-blend-mode: screen; opacity: .6; }
+#education .fd-edu-r { opacity: .4; }
 
 @media (max-width: 860px) {
-  .flower-deco { opacity: .28; }
+  .flower-deco, #education .flower-deco { opacity: .28; }
   .fd-hero-l, .fd-about, .fd-edu-r { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { .flower-deco { animation: none; } }
