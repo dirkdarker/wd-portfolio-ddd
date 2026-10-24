@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name | Interactive Portfolio</title>
+  <title>Your Name | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 
   <header class="nav">
-    <a class="brand" href="#about">Portfolio</a>
+    <a class="brand" href="#about">your name</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
     <ul class="nav-links" id="nav-links">
       <li><a href="#about">About me</a></li>
@@ -24,70 +24,123 @@
     </ul>
   </header>
 
-  <main class="wrap">
+  <main>
 
-    <section id="about" class="hero">
-      <div>
-        <h1>Hello, I'm <span class="name">Your Name</span>!</h1>
-        <h2>I'm a (your role here).</h2>
-        <p>Write two or three friendly sentences about what you love to make and who you make it for.</p>
-        <div class="actions">
-          <a class="btn" href="#contact">Hit me up!</a>
-          <a class="btn alt" href="#works">See my works</a>
+    <!-- ABOUT ME -->
+    <section id="about" style="padding:0">
+      <div class="hero">
+        <img class="deco l" src="images/deco-left.png" alt="" onerror="this.remove()">
+        <img class="deco r" src="images/deco-right.png" alt="" onerror="this.remove()">
+        <div>
+          <h1><b>NAME</b><i>folio</i></h1>
+          <ul class="pills">
+            <li>Branding</li><li>Social Media</li><li>Print Design</li><li>Photography</li>
+          </ul>
+          <p class="handle">@yourhandle</p>
         </div>
       </div>
-      <div class="portrait">
-        <span class="spark a" aria-hidden="true">✦</span>
-        <span class="spark b" aria-hidden="true">★</span>
-        <div class="frame"><img src="images/profile.jpg" alt="Photo of Your Name" onerror="this.remove()"></div>
-        <span class="sticker">Open to work ✿</span>
-      </div>
-    </section>
 
-    <section id="works">
-      <h2 class="title">My Works</h2>
-      <div class="gallery">
-        <button class="polaroid" type="button"><div class="pic"><img src="images/work1.jpg" alt="Work 1 description" onerror="this.remove()"></div><figcaption>Project one</figcaption></button>
-        <button class="polaroid" type="button"><div class="pic"><img src="images/work2.jpg" alt="Work 2 description" onerror="this.remove()"></div><figcaption>Project two</figcaption></button>
-        <button class="polaroid" type="button"><div class="pic"><img src="images/work3.jpg" alt="Work 3 description" onerror="this.remove()"></div><figcaption>Project three</figcaption></button>
-        <button class="polaroid" type="button"><div class="pic"><img src="images/work4.jpg" alt="Work 4 description" onerror="this.remove()"></div><figcaption>Project four</figcaption></button>
-      </div>
-    </section>
-
-    <section id="skills">
-      <h2 class="title">My Skills</h2>
-      <div class="cards">
-        <article class="card"><span class="icon" aria-hidden="true">🎨</span><h3>Skill one</h3><p>One or two lines about what you do with it.</p></article>
-        <article class="card"><span class="icon" aria-hidden="true">🎬</span><h3>Skill two</h3><p>One or two lines about what you do with it.</p></article>
-        <article class="card"><span class="icon" aria-hidden="true">✍️</span><h3>Skill three</h3><p>One or two lines about what you do with it.</p></article>
-        <article class="card"><span class="icon" aria-hidden="true">💻</span><h3>Skill four</h3><p>One or two lines about what you do with it.</p></article>
-      </div>
-    </section>
-
-    <section id="education">
-      <h2 class="title">My Education</h2>
-      <ol class="timeline">
-        <li><div class="edu"><span class="when">2024 – Present</span><h3>College</h3><h4>Your University</h4><p>Your degree and major.</p></div></li>
-        <li><div class="edu"><span class="when">2021 – 2023</span><h3>Senior High School</h3><h4>Your School</h4><p>Your strand and a short note.</p></div></li>
-        <li><div class="edu"><span class="when">2017 – 2021</span><h3>Junior High School</h3><h4>Your School</h4><p>A short note.</p></div></li>
-      </ol>
-    </section>
-
-    <section id="contact">
-      <h2 class="title">Contact Me</h2>
-      <div class="contact-grid">
+      <div class="wrap about-grid" style="padding-block:2rem 5rem">
+        <div class="photo"><img src="images/profile.jpg" alt="Portrait of Your Name" onerror="this.remove()"></div>
+        <div class="about-text">
+          <h2 class="script h2">about me</h2>
+          <p><strong>Hi, I'm Your Name!</strong> Write two or three sentences about your background and what you make.</p>
+          <p>Add a second short paragraph about your experience or what makes your work different.</p>
+          <p>Let's bring your ideas to life.</p>
+        </div>
         <div>
-          <p>Have a project or just want to say hi? Send a message or find me on social media.</p>
-          <ul class="socials">
-            <li><a class="btn" href="https://facebook.com/yourname" target="_blank" rel="noopener">Facebook</a></li>
-            <li><a class="btn" href="https://instagram.com/yourname" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a class="btn" href="https://tiktok.com/@yourname" target="_blank" rel="noopener">TikTok</a></li>
+          <h2 class="script h2">personal info</h2>
+          <dl class="info">
+            <div><dt>Name:</dt><dd>Your Full Name</dd></div>
+            <div><dt>Birthday:</dt><dd>Month 1, 2000</dd></div>
+            <div><dt>Phone:</dt><dd>0900 000 0000</dd></div>
+            <div><dt>Address:</dt><dd>City, Province, Philippines</dd></div>
+          </dl>
+          <ul class="links">
+            <li><a href="mailto:you@example.com">you@example.com</a></li>
+            <li><a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">/yourhandle</a></li>
+            <li><a href="https://facebook.com/yourname" target="_blank" rel="noopener">/yourname</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKS -->
+    <section id="works" style="padding:0">
+      <div class="index">
+        <img class="deco" src="images/deco-flower-white.png" alt="" onerror="this.remove()">
+        <div class="wrap">
+          <h2 class="script">Index</h2>
+          <p class="sub">Logofolio | Branding | Social Media Design | Print Design | Photography</p>
+          <div class="index-list">
+            <button class="index-row" type="button" data-filter="logo" aria-pressed="false"><span class="t">01. logofolio</span><span class="d">Logo Design / Wordmarks / Lettermarks / Typography</span></button>
+            <button class="index-row" type="button" data-filter="branding" aria-pressed="false"><span class="t">02. branding</span><span class="d">Logo Design / Brand Identity / Visual Systems</span></button>
+            <button class="index-row" type="button" data-filter="social" aria-pressed="false"><span class="t">03. social media design</span><span class="d">Content Creation / Social Media Assets / Campaign Design</span></button>
+            <button class="index-row" type="button" data-filter="print" aria-pressed="false"><span class="t">04. print design</span><span class="d">Merchandise / Posters &amp; Flyers / Packaging Design</span></button>
+            <button class="index-row" type="button" data-filter="photo" aria-pressed="false"><span class="t">05. photography</span><span class="d">Product Photography / Portraits / Event Photography</span></button>
+          </div>
+          <p class="hint">Select a category to filter the works below. Select it again to show everything.</p>
+        </div>
+      </div>
+
+      <div class="wrap works-body">
+        <p class="works-label" id="works-label">all works</p>
+        <div class="gallery">
+          <button class="polaroid" type="button" data-category="logo"><div class="pic"><img src="images/logo1.png" alt="Logo for Brand One" onerror="this.remove()"></div><figcaption>Brand One</figcaption></button>
+          <button class="polaroid" type="button" data-category="logo"><div class="pic"><img src="images/logo2.png" alt="Logo for Brand Two" onerror="this.remove()"></div><figcaption>Brand Two</figcaption></button>
+          <button class="polaroid" type="button" data-category="branding"><div class="pic"><img src="images/brand1.png" alt="Brand identity for Brand Three" onerror="this.remove()"></div><figcaption>Brand Three</figcaption></button>
+          <button class="polaroid" type="button" data-category="social"><div class="pic"><img src="images/social1.png" alt="Social media post design" onerror="this.remove()"></div><figcaption>Campaign One</figcaption></button>
+          <button class="polaroid" type="button" data-category="print"><div class="pic"><img src="images/print1.png" alt="Poster design" onerror="this.remove()"></div><figcaption>Poster One</figcaption></button>
+          <button class="polaroid" type="button" data-category="photo"><div class="pic"><img src="images/photo1.jpg" alt="Portrait photograph" onerror="this.remove()"></div><figcaption>Portrait Series</figcaption></button>
+        </div>
+        <p class="empty" id="works-empty">Nothing in this category yet.</p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="wrap skills-grid">
+        <h2 class="script h2">skills</h2>
+        <ul class="skills">
+          <li><span class="badge">Ps</span>Adobe Photoshop</li>
+          <li><span class="badge">Lr</span>Adobe Lightroom</li>
+          <li><span class="badge">Ai</span>Adobe Illustrator <em>(basic)</em></li>
+          <li><span class="badge">Dr</span>DaVinci Resolve <em>(basic)</em></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="wrap edu-grid">
+        <div>
+          <h2 class="script h2">education</h2>
+          <div class="entry"><h4>Your University</h4><div class="when">2020 – 2024</div><p>Your degree and major.</p></div>
+          <div class="entry"><h4>Your Senior High School</h4><div class="when">2018 – 2020</div><p>Your strand.</p></div>
+        </div>
+        <div>
+          <h2 class="script h2">experiences</h2>
+          <div class="entry"><h4>Company or Organization</h4><p>Role | 2020 – Present</p></div>
+          <div class="entry"><h4>Freelance – Studio Name</h4><p>Role | 2019 – Present</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <h2 class="script h2">contact</h2>
+          <a class="big-mail" href="mailto:you@example.com">you@example.com</a>
+          <ul class="links">
+            <li><a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://facebook.com/yourname" target="_blank" rel="noopener">Facebook</a></li>
           </ul>
         </div>
         <form data-email="you@example.com" novalidate>
           <label>Name <input name="name" type="text" required autocomplete="name"></label>
           <label>Email <input name="email" type="email" required autocomplete="email"></label>
-          <label>Message <textarea name="message" rows="4" required></textarea></label>
+          <label>Message <textarea name="message" rows="3" required></textarea></label>
           <button class="btn" type="submit">Send message</button>
           <p class="form-status" role="status"></p>
         </form>
@@ -96,7 +149,7 @@
 
   </main>
 
-  <footer>Made by Your Name © <span id="year"></span></footer>
+  <footer><span>© <span id="year"></span> Your Name</span><a href="#about">Back to top</a></footer>
 
   <dialog class="lightbox" aria-label="Enlarged work">
     <img src="" alt="">
