@@ -77,8 +77,10 @@ section { padding: 5rem 0; scroll-margin-top: 3.5rem; position: relative; }
 /* ---------- Works ---------- */
 .index { position: relative; background: var(--dark); color: var(--on-dark); overflow: hidden; padding: 4.5rem 0; }
 .index .wrap { position: relative; }
-.index .flower { position: absolute; right: -7%; top: -9%; width: min(44vw, 520px); height: auto; pointer-events: none; }
-.index h2 { font-size: clamp(4rem, 11vw, 8rem); margin-bottom: 3.5rem; }
+.index .flower { mix-blend-mode: screen; position: absolute; right: -7%; top: -9%; width: min(44vw, 520px); height: auto; pointer-events: none; }
+.index h2 { font-size: clamp(4rem, 11vw, 8rem); margin-bottom: 3.5rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 .06em; line-height: .9; }
+.index h2 b { font: 800 1em/.9 var(--sans); letter-spacing: -.06em; }
+.index h2 i { font: italic 400 1.05em/.9 var(--serif); letter-spacing: -.04em; }
 .index-list { display: grid; gap: .1rem; position: relative; }
 .index-row {
   display: grid; grid-template-columns: 1fr; align-items: center;
