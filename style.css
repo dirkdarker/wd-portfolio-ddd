@@ -55,7 +55,7 @@ section { padding: 5rem 0; scroll-margin-top: 3.5rem; position: relative; }
 .hero h1 { font-size: clamp(3.4rem, 12vw, 9.5rem); line-height: .9; letter-spacing: -.045em; display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: 0 .06em; }
 .hero h1 b { font: 800 1em/.9 var(--sans); letter-spacing: -.06em; }
 .hero h1 i { font: italic 400 1.05em/.9 var(--serif); letter-spacing: -.04em; }
-.handle { margin-top: 5rem; font-size: .9rem; font-weight: 500; }
+.handle { margin-top: 1.6rem; font-size: .9rem; font-weight: 500; }
 .hero .deco.l { left: -5%; top: 28%; width: min(26vw, 320px); }
 .hero .deco.r { right: -3%; top: -2%; width: min(24vw, 300px); }
 
