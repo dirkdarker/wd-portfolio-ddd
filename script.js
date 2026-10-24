@@ -14,7 +14,7 @@
   navList.addEventListener("click", (e) => { if (e.target.closest("a")) setMenu(false); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
 
-  /* ---------- Highlight the menu item for the section you're viewing ---------- */
+  /* ---------- Highlight the menu item for the section in view ---------- */
   const links = [...document.querySelectorAll(".nav-links a")];
   const sections = links.map((a) => document.querySelector(a.getAttribute("href"))).filter(Boolean);
 
@@ -23,8 +23,7 @@
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         links.forEach((a) => {
-          const on = a.getAttribute("href") === "#" + entry.target.id;
-          if (on) a.setAttribute("aria-current", "true");
+          if (a.getAttribute("href") === "#" + entry.target.id) a.setAttribute("aria-current", "true");
           else a.removeAttribute("aria-current");
         });
       });
@@ -33,12 +32,36 @@
   );
   sections.forEach((s) => spy.observe(s));
 
-  /* ---------- Works: click a polaroid to enlarge it ---------- */
+  /* ---------- Works: index rows filter the gallery ---------- */
+  const rows = [...document.querySelectorAll(".index-row")];
+  const cards = [...document.querySelectorAll(".polaroid")];
+  const label = document.getElementById("works-label");
+  const empty = document.getElementById("works-empty");
+
+  rows.forEach((row) =>
+    row.addEventListener("click", () => {
+      const turningOff = row.getAttribute("aria-pressed") === "true";
+      const f = turningOff ? "all" : row.dataset.filter;
+
+      rows.forEach((r) => r.setAttribute("aria-pressed", String(!turningOff && r === row)));
+      let shown = 0;
+      cards.forEach((c) => {
+        c.hidden = f !== "all" && c.dataset.category !== f;
+        if (!c.hidden) shown++;
+      });
+      label.textContent = turningOff ? "all works" : row.querySelector(".t").textContent.replace(/^\d+\.\s*/, "");
+      empty.classList.toggle("show", shown === 0);
+
+      document.querySelector(".works-body").scrollIntoView({ behavior: "smooth", block: "start" });
+    })
+  );
+
+  /* ---------- Works: click an item to enlarge it ---------- */
   const box = document.querySelector(".lightbox");
   const boxImg = box.querySelector("img");
   const boxCap = box.querySelector(".caption");
 
-  document.querySelectorAll(".polaroid").forEach((card) =>
+  cards.forEach((card) =>
     card.addEventListener("click", () => {
       const img = card.querySelector("img");
       if (!img || !img.naturalWidth) return; // skip if the picture is missing
@@ -49,7 +72,7 @@
     })
   );
   box.querySelector(".close").addEventListener("click", () => box.close());
-  box.addEventListener("click", (e) => { if (e.target === box) box.close(); }); // click outside
+  box.addEventListener("click", (e) => { if (e.target === box) box.close(); });
 
   /* ---------- Contact form ---------- */
   const form = document.querySelector("form");
