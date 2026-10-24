@@ -12,6 +12,49 @@
 </head>
 <body>
 
+  <!-- Shared flower artwork: colour comes from CSS (currentColor), so it works on light and dark sections -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <g id="petal2">
+        <path d="M0 0C-72-38-92-150 0-192 92-150 72-38 0 0Z" fill="currentColor" fill-opacity=".07"/>
+        <path d="M0 0C-72-38-92-150 0-192 92-150 72-38 0 0Z" fill="none" stroke="currentColor" stroke-opacity=".75" stroke-width="1.2"/>
+        <path d="M0-8V-170M0-30Q-28-95-46-150M0-30Q28-95 46-150M0-60Q-22-110-30-165M0-60Q22-110 30-165" fill="none" stroke="currentColor" stroke-opacity=".45" stroke-width=".8"/>
+      </g>
+      <g id="petal-slim">
+        <path d="M0 0C-34-30-44-120 0-185 44-120 34-30 0 0Z" fill="currentColor" fill-opacity=".06"/>
+        <path d="M0 0C-34-30-44-120 0-185 44-120 34-30 0 0Z" fill="none" stroke="currentColor" stroke-opacity=".75" stroke-width="1.2"/>
+        <path d="M0-8V-165M0-40Q-10-100-14-150M0-40Q10-100 14-150" fill="none" stroke="currentColor" stroke-opacity=".45" stroke-width=".8"/>
+      </g>
+
+      <!-- 5-petal flower (same shape as the WORKfolio one) -->
+      <symbol id="flower-5" viewBox="0 0 400 400">
+        <g transform="translate(200 200) rotate(14)">
+          <use href="#petal2"/><use href="#petal2" transform="rotate(72)"/><use href="#petal2" transform="rotate(144)"/>
+          <use href="#petal2" transform="rotate(216)"/><use href="#petal2" transform="rotate(288)"/>
+          <circle r="64" fill="currentColor" fill-opacity=".08"/><circle r="40" fill="currentColor" fill-opacity=".12"/><circle r="18" fill="currentColor" fill-opacity=".2"/>
+          <g stroke="currentColor" stroke-opacity=".8" stroke-width="1" fill="currentColor">
+            <path d="M0 0L-22-52M0 0L-4-60M0 0L18-56M0 0L38-44M0 0L-40-36" fill="none"/>
+            <circle cx="-22" cy="-52" r="2.5"/><circle cx="-4" cy="-60" r="2.5"/><circle cx="18" cy="-56" r="2.5"/><circle cx="38" cy="-44" r="2.5"/><circle cx="-40" cy="-36" r="2.5"/>
+          </g>
+        </g>
+      </symbol>
+
+      <!-- 8-petal bloom with slimmer petals, for variety -->
+      <symbol id="flower-8" viewBox="0 0 400 400">
+        <g transform="translate(200 200)">
+          <use href="#petal-slim"/><use href="#petal-slim" transform="rotate(45)"/><use href="#petal-slim" transform="rotate(90)"/><use href="#petal-slim" transform="rotate(135)"/>
+          <use href="#petal-slim" transform="rotate(180)"/><use href="#petal-slim" transform="rotate(225)"/><use href="#petal-slim" transform="rotate(270)"/><use href="#petal-slim" transform="rotate(315)"/>
+          <circle r="46" fill="currentColor" fill-opacity=".08"/><circle r="26" fill="currentColor" fill-opacity=".14"/>
+          <g stroke="currentColor" stroke-opacity=".8" stroke-width="1" fill="currentColor">
+            <path d="M0 0L-30-30M0 0L0-42M0 0L30-30M0 0L42 0M0 0L30 30M0 0L0 42M0 0L-30 30M0 0L-42 0" fill="none"/>
+            <circle cx="-30" cy="-30" r="2.2"/><circle cx="0" cy="-42" r="2.2"/><circle cx="30" cy="-30" r="2.2"/><circle cx="42" cy="0" r="2.2"/>
+            <circle cx="30" cy="30" r="2.2"/><circle cx="0" cy="42" r="2.2"/><circle cx="-30" cy="30" r="2.2"/><circle cx="-42" cy="0" r="2.2"/>
+          </g>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
   <header class="nav">
     <a class="brand" href="#about">dirkdirkdirk</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
@@ -28,6 +71,9 @@
 
     <!-- ABOUT ME -->
     <section id="about" style="padding:0">
+    <svg class="flower-deco fd-hero-r" aria-hidden="true" focusable="false"><use href="#flower-5"/></svg>
+    <svg class="flower-deco fd-hero-l" aria-hidden="true" focusable="false"><use href="#flower-8"/></svg>
+    <svg class="flower-deco fd-about" aria-hidden="true" focusable="false"><use href="#flower-8"/></svg>
       <div class="hero">
         <img class="deco l" src="images/deco-left.png" alt="" onerror="this.remove()">
         <img class="deco r" src="images/deco-right.png" alt="" onerror="this.remove()">
@@ -110,6 +156,7 @@
 
     <!-- SKILLS -->
     <section id="skills">
+      <svg class="flower-deco fd-skills" aria-hidden="true" focusable="false"><use href="#flower-5"/></svg>
       <div class="wrap skills-grid">
         <h2 class="script h2">skills</h2>
         <div class="skill-groups">
@@ -140,6 +187,8 @@
 
     <!-- EDUCATION -->
     <section id="education">
+      <svg class="flower-deco fd-edu-l" aria-hidden="true" focusable="false"><use href="#flower-8"/></svg>
+      <svg class="flower-deco fd-edu-r" aria-hidden="true" focusable="false"><use href="#flower-5"/></svg>
       <div class="wrap edu-grid">
         <div>
           <h2 class="script h2">education</h2>
@@ -152,6 +201,7 @@
 
     <!-- CONTACT -->
     <section id="contact">
+      <svg class="flower-deco fd-contact" aria-hidden="true" focusable="false"><use href="#flower-5"/></svg>
       <div class="wrap contact-grid">
         <div>
           <h2 class="script h2">contact</h2>
