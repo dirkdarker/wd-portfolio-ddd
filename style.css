@@ -1,4 +1,4 @@
-/* ---------- Tokens ---------- */
+
 :root {
   --paper: #ebe8e3;
   --ink: #1d1b1a;
@@ -30,14 +30,11 @@ a { color: inherit; }
 .wrap { padding-inline: var(--gutter); max-width: 1280px; margin-inline: auto; }
 section { padding: 5rem 0; scroll-margin-top: 3.5rem; position: relative; }
 
-/* Script-italic headings (the "personal info" look) */
 .script { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -.035em; line-height: .95; }
 .h2 { font-size: clamp(2.6rem, 5.5vw, 4rem); margin-bottom: 1.5rem; }
 
-/* Decorative botanical images (optional: add your own PNGs) */
 .deco { position: absolute; pointer-events: none; user-select: none; filter: grayscale(1) contrast(1.1); mix-blend-mode: multiply; }
 
-/* ---------- Navigation ---------- */
 .nav {
   position: sticky; top: 0; z-index: 50; background: var(--paper);
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
@@ -50,7 +47,6 @@ section { padding: 5rem 0; scroll-margin-top: 3.5rem; position: relative; }
 .nav-links a[aria-current="true"] { border-bottom-color: var(--ink); }
 .menu-btn { display: none; font: 500 .95rem var(--sans); background: none; border: 1px solid var(--ink); border-radius: 999px; padding: .3rem 1rem; cursor: pointer; color: inherit; }
 
-/* ---------- Hero ---------- */
 .hero { min-height: calc(100vh - 3.5rem); display: grid; place-items: center; text-align: center; overflow: hidden; padding: 4rem var(--gutter); }
 .hero h1 { font-size: clamp(3.4rem, 12vw, 9.5rem); line-height: .9; letter-spacing: -.045em; display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: 0 .06em; }
 .hero h1 b { font: 800 1em/.9 var(--sans); letter-spacing: -.06em; }
@@ -59,7 +55,7 @@ section { padding: 5rem 0; scroll-margin-top: 3.5rem; position: relative; }
 .hero .deco.l { left: -5%; top: 28%; width: min(26vw, 320px); }
 .hero .deco.r { right: -3%; top: -2%; width: min(24vw, 300px); }
 
-/* ---------- About ---------- */
+/*-about- */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3rem; align-items: start; }
 .photo { border: 1px solid var(--ink); aspect-ratio: 4/5; background: #d9d5cf; overflow: hidden; }
 .photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); }
@@ -72,7 +68,7 @@ section { padding: 5rem 0; scroll-margin-top: 3.5rem; position: relative; }
 .links a { text-decoration: none; border-bottom: 1px solid transparent; }
 .links a:hover { border-bottom-color: var(--ink); }
 
-/* ---------- Works ---------- */
+/* -works- */
 .index { position: relative; background: var(--dark); color: var(--on-dark); overflow: hidden; padding: 4.5rem 0; }
 .index .wrap { position: relative; }
 .index .flower { mix-blend-mode: screen; position: absolute; right: -7%; top: -9%; width: min(44vw, 520px); height: auto; pointer-events: none; }
@@ -109,11 +105,10 @@ dialog.lightbox::backdrop { background: rgba(29, 27, 26, .85); }
 .lightbox img { max-height: 74vh; width: auto; margin: 0 auto; }
 .lightbox .bar { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; font-size: .9rem; }
 
-/* ---------- Pills & buttons ---------- */
 .btn { display: inline-block; font: 500 .95rem var(--sans); cursor: pointer; text-decoration: none; padding: .55rem 1.4rem; background: var(--ink); color: var(--paper); border: 1px solid var(--ink); border-radius: 999px; transition: background .2s, color .2s; }
 .btn:hover { background: transparent; color: var(--ink); }
 
-/* ---------- Skills ---------- */
+/* -skills- */
 .skills-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; }
 .skills { list-style: none; margin: 0; padding: 0; display: grid; gap: .9rem; }
 .skills li { display: flex; align-items: center; gap: .8rem; text-transform: uppercase; font-size: .92rem; letter-spacing: .02em; }
@@ -124,14 +119,14 @@ dialog.lightbox::backdrop { background: rgba(29, 27, 26, .85); }
 .skill-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
 .h3 { font-size: clamp(1.8rem, 3vw, 2.3rem); margin-bottom: 1.2rem; }
 
-/* ---------- Education & experience ---------- */
+/* -educ- */
 .edu-grid { display: grid; grid-template-columns: minmax(0, 560px); justify-content: center; text-align: center; }
 .entry { margin-bottom: 1.8rem; font-size: .95rem; }
 .entry h4 { font: 700 .95rem/1.4 var(--sans); text-transform: uppercase; }
 .entry .when { font-weight: 700; text-transform: uppercase; }
 .entry p { color: var(--muted); margin-top: .5rem; }
 
-/* ---------- Contact ---------- */
+/* -contacts- */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
 .big-mail { display: inline-block; font: italic 400 clamp(2rem, 4.2vw, 3.2rem)/1.05 var(--serif); letter-spacing: -.03em; margin-bottom: 1.5rem; word-break: break-word; }
 form { display: grid; gap: 1.4rem; max-width: 520px; }
@@ -144,7 +139,6 @@ form .btn { justify-self: start; }
 
 footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding: 1.5rem var(--gutter); font-size: .85rem; color: var(--muted); }
 
-/* ---------- Flowers (decorative) ---------- */
 .index .flower { animation: flower-spin 90s linear infinite; }
 @keyframes flower-spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .index .flower { animation: none; } }
@@ -168,8 +162,6 @@ section { overflow-x: clip; }
 .fd-edu-r   { --s: min(18vw, 210px); --r: -28deg; right: 4vw;  bottom: 1rem; opacity: .35; }
 .fd-contact { --s: min(38vw, 460px); --r: 24deg;  left: -11vw; top: 2rem; }
 
-
-/* Education: inverted (dark) like WORKfolio */
 #education { background: var(--dark); color: var(--on-dark); }
 #education ::selection { background: var(--on-dark); color: var(--dark); }
 #education .entry p { color: var(--on-dark); opacity: .72; }
@@ -182,7 +174,7 @@ section { overflow-x: clip; }
 }
 @media (prefers-reduced-motion: reduce) { .flower-deco { animation: none; } }
 
-/* ---------- Tablet & mobile ---------- */
+/* -mobile ver-*/
 @media (max-width: 860px) {
   section { padding: 3.5rem 0; }
   .about-grid, .skills-grid, .skill-groups, .edu-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.2rem; }
