@@ -144,6 +144,32 @@ form .btn { justify-self: start; }
 
 footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding: 1.5rem var(--gutter); font-size: .85rem; color: var(--muted); }
 
+/* ---------- Flowers (decorative) ---------- */
+section { overflow-x: clip; }
+.hero > div, .wrap { position: relative; z-index: 1; }
+.flower-deco {
+  position: absolute; z-index: 0; pointer-events: none; user-select: none;
+  width: var(--s, 320px); height: var(--s, 320px);
+  color: var(--ink); opacity: .5; mix-blend-mode: multiply;
+  transform: rotate(var(--r, 0deg));
+  animation: bloom-spin 160s linear infinite;
+}
+@keyframes bloom-spin { to { transform: rotate(calc(var(--r, 0deg) + 360deg)); } }
+
+.fd-hero-r  { --s: min(34vw, 420px); --r: 18deg;  right: -7vw; top: 34vh; }
+.fd-hero-l  { --s: min(22vw, 250px); --r: -12deg; left: -5vw;  top: 6vh;  opacity: .4; }
+.fd-about   { --s: min(20vw, 230px); --r: 30deg;  left: 38%;   bottom: -3rem; opacity: .35; }
+.fd-skills  { --s: min(36vw, 440px); --r: -20deg; right: -9vw; top: -3rem; }
+.fd-edu-l   { --s: min(30vw, 360px); --r: 10deg;  left: -9vw;  top: 8%; }
+.fd-edu-r   { --s: min(18vw, 210px); --r: -28deg; right: 4vw;  bottom: 1rem; opacity: .35; }
+.fd-contact { --s: min(38vw, 460px); --r: 24deg;  right: -10vw; bottom: -8rem; }
+
+@media (max-width: 860px) {
+  .flower-deco { opacity: .28; }
+  .fd-hero-l, .fd-about, .fd-edu-r { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .flower-deco { animation: none; } }
+
 /* ---------- Tablet & mobile ---------- */
 @media (max-width: 860px) {
   section { padding: 3.5rem 0; }
