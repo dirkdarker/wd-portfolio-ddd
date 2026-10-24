@@ -1,3 +1,4 @@
 # webdev-portpurrlio
-![sicutie](meowmeow.jpg)
+![cute](images/meowmeow.jpg)
+---
 meow mrrp meowmeow meow mrrp
