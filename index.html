@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name | Interactive Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="nav">
+    <a class="brand" href="#about">Portfolio</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About me</a></li>
+      <li><a href="#works">Works</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <main class="wrap">
+
+    <section id="about" class="hero">
+      <div>
+        <h1>Hello, I'm <span class="name">Your Name</span>!</h1>
+        <h2>I'm a (your role here).</h2>
+        <p>Write two or three friendly sentences about what you love to make and who you make it for.</p>
+        <div class="actions">
+          <a class="btn" href="#contact">Hit me up!</a>
+          <a class="btn alt" href="#works">See my works</a>
+        </div>
+      </div>
+      <div class="portrait">
+        <span class="spark a" aria-hidden="true">✦</span>
+        <span class="spark b" aria-hidden="true">★</span>
+        <div class="frame"><img src="images/profile.jpg" alt="Photo of Your Name" onerror="this.remove()"></div>
+        <span class="sticker">Open to work ✿</span>
+      </div>
+    </section>
+
+    <section id="works">
+      <h2 class="title">My Works</h2>
+      <div class="gallery">
+        <button class="polaroid" type="button"><div class="pic"><img src="images/work1.jpg" alt="Work 1 description" onerror="this.remove()"></div><figcaption>Project one</figcaption></button>
+        <button class="polaroid" type="button"><div class="pic"><img src="images/work2.jpg" alt="Work 2 description" onerror="this.remove()"></div><figcaption>Project two</figcaption></button>
+        <button class="polaroid" type="button"><div class="pic"><img src="images/work3.jpg" alt="Work 3 description" onerror="this.remove()"></div><figcaption>Project three</figcaption></button>
+        <button class="polaroid" type="button"><div class="pic"><img src="images/work4.jpg" alt="Work 4 description" onerror="this.remove()"></div><figcaption>Project four</figcaption></button>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="title">My Skills</h2>
+      <div class="cards">
+        <article class="card"><span class="icon" aria-hidden="true">🎨</span><h3>Skill one</h3><p>One or two lines about what you do with it.</p></article>
+        <article class="card"><span class="icon" aria-hidden="true">🎬</span><h3>Skill two</h3><p>One or two lines about what you do with it.</p></article>
+        <article class="card"><span class="icon" aria-hidden="true">✍️</span><h3>Skill three</h3><p>One or two lines about what you do with it.</p></article>
+        <article class="card"><span class="icon" aria-hidden="true">💻</span><h3>Skill four</h3><p>One or two lines about what you do with it.</p></article>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2 class="title">My Education</h2>
+      <ol class="timeline">
+        <li><div class="edu"><span class="when">2024 – Present</span><h3>College</h3><h4>Your University</h4><p>Your degree and major.</p></div></li>
+        <li><div class="edu"><span class="when">2021 – 2023</span><h3>Senior High School</h3><h4>Your School</h4><p>Your strand and a short note.</p></div></li>
+        <li><div class="edu"><span class="when">2017 – 2021</span><h3>Junior High School</h3><h4>Your School</h4><p>A short note.</p></div></li>
+      </ol>
+    </section>
+
+    <section id="contact">
+      <h2 class="title">Contact Me</h2>
+      <div class="contact-grid">
+        <div>
+          <p>Have a project or just want to say hi? Send a message or find me on social media.</p>
+          <ul class="socials">
+            <li><a class="btn" href="https://facebook.com/yourname" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a class="btn" href="https://instagram.com/yourname" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a class="btn" href="https://tiktok.com/@yourname" target="_blank" rel="noopener">TikTok</a></li>
+          </ul>
+        </div>
+        <form data-email="you@example.com" novalidate>
+          <label>Name <input name="name" type="text" required autocomplete="name"></label>
+          <label>Email <input name="email" type="email" required autocomplete="email"></label>
+          <label>Message <textarea name="message" rows="4" required></textarea></label>
+          <button class="btn" type="submit">Send message</button>
+          <p class="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>Made by Your Name © <span id="year"></span></footer>
+
+  <dialog class="lightbox" aria-label="Enlarged work">
+    <img src="" alt="">
+    <div class="bar"><span class="caption"></span><button class="btn close" type="button">Close</button></div>
+  </dialog>
+
+</body>
+</html>
