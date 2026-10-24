@@ -75,19 +75,18 @@ section { padding: 5rem 0; scroll-margin-top: 3.5rem; position: relative; }
 .links a:hover { border-bottom-color: var(--ink); }
 
 /* ---------- Works ---------- */
-.index { background: var(--dark); color: var(--on-dark); overflow: hidden; padding: 4.5rem 0; }
-.index .deco { right: -4%; top: -3%; width: min(36vw, 460px); mix-blend-mode: screen; filter: grayscale(1); }
-.index h2 { font-size: clamp(4rem, 11vw, 8rem); margin-bottom: .3rem; }
-.index .sub { font-size: .8rem; margin-bottom: 4.5rem; opacity: .9; }
+.index { position: relative; background: var(--dark); color: var(--on-dark); overflow: hidden; padding: 4.5rem 0; }
+.index .wrap { position: relative; }
+.index .flower { position: absolute; right: -7%; top: -9%; width: min(44vw, 520px); height: auto; pointer-events: none; }
+.index h2 { font-size: clamp(4rem, 11vw, 8rem); margin-bottom: 3.5rem; }
 .index-list { display: grid; gap: .1rem; position: relative; }
 .index-row {
-  display: grid; grid-template-columns: minmax(0, 1.1fr) 1.4fr; gap: 2rem; align-items: center;
+  display: grid; grid-template-columns: 1fr; align-items: center;
   width: 100%; padding: .3rem 0; text-align: left; background: none; border: 0; cursor: pointer; color: inherit; font: inherit; opacity: .78; transition: opacity .2s;
 }
 .index-row:hover, .index-row[aria-pressed="true"] { opacity: 1; }
 .index-row .t { font: italic 400 clamp(1.9rem, 4.2vw, 3.1rem)/1 var(--serif); letter-spacing: -.035em; }
 .index-row[aria-pressed="true"] .t { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
-.index-row .d { font-size: .82rem; }
 .index .hint { margin-top: 2rem; font-size: .8rem; opacity: .7; }
 
 .works-body { padding-block: 4rem 2rem; }
@@ -118,6 +117,10 @@ dialog.lightbox::backdrop { background: rgba(29, 27, 26, .85); }
 .skills .badge { flex: none; display: grid; place-items: center; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--ink); color: var(--paper); font: 700 .68rem var(--sans); text-transform: none; letter-spacing: 0; }
 .skills em { font-size: .62rem; text-transform: none; color: var(--muted); }
 
+
+.skill-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.h3 { font-size: clamp(1.8rem, 3vw, 2.3rem); margin-bottom: 1.2rem; }
+
 /* ---------- Education & experience ---------- */
 .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
 .entry { margin-bottom: 1.8rem; font-size: .95rem; }
@@ -141,7 +144,7 @@ footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1r
 /* ---------- Tablet & mobile ---------- */
 @media (max-width: 860px) {
   section { padding: 3.5rem 0; }
-  .about-grid, .skills-grid, .edu-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.2rem; }
+  .about-grid, .skills-grid, .skill-groups, .edu-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.2rem; }
   .photo { max-width: 320px; }
   .index-row { grid-template-columns: 1fr; gap: .2rem; padding: .5rem 0; }
   .hero .deco { opacity: .5; }
