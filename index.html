@@ -68,16 +68,31 @@
     <!-- WORKS -->
     <section id="works" style="padding:0">
       <div class="index">
-        <img class="deco" src="images/deco-flower-white.png" alt="" onerror="this.remove()">
+        <svg class="flower" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+          <defs>
+            <radialGradient id="glow"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+            <g id="petal">
+              <path d="M0 0C-72-38-92-150 0-192 92-150 72-38 0 0Z" fill="#fff" fill-opacity=".07"/>
+              <path d="M0 0C-72-38-92-150 0-192 92-150 72-38 0 0Z" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="1.2"/>
+              <path d="M0-8V-170M0-30Q-28-95-46-150M0-30Q28-95 46-150M0-60Q-22-110-30-165M0-60Q22-110 30-165" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width=".8"/>
+            </g>
+          </defs>
+          <g transform="translate(200 200) rotate(14)">
+            <use href="#petal"/><use href="#petal" transform="rotate(72)"/><use href="#petal" transform="rotate(144)"/>
+            <use href="#petal" transform="rotate(216)"/><use href="#petal" transform="rotate(288)"/>
+            <circle r="64" fill="url(#glow)"/>
+            <g stroke="#fff" stroke-opacity=".8" stroke-width="1" fill="#fff">
+              <path d="M0 0L-22-52M0 0L-4-60M0 0L18-56M0 0L38-44M0 0L-40-36" fill="none"/>
+              <circle cx="-22" cy="-52" r="2.5"/><circle cx="-4" cy="-60" r="2.5"/><circle cx="18" cy="-56" r="2.5"/><circle cx="38" cy="-44" r="2.5"/><circle cx="-40" cy="-36" r="2.5"/>
+            </g>
+          </g>
+        </svg>
         <div class="wrap">
-          <h2 class="script">Index</h2>
-          <p class="sub">Logofolio | Branding | Social Media Design | Print Design | Photography</p>
+          <h2 class="script">Workfolio</h2>
           <div class="index-list">
-            <button class="index-row" type="button" data-filter="logo" aria-pressed="false"><span class="t">01. logofolio</span><span class="d">Logo Design / Wordmarks / Lettermarks / Typography</span></button>
-            <button class="index-row" type="button" data-filter="branding" aria-pressed="false"><span class="t">02. branding</span><span class="d">Logo Design / Brand Identity / Visual Systems</span></button>
-            <button class="index-row" type="button" data-filter="social" aria-pressed="false"><span class="t">03. social media design</span><span class="d">Content Creation / Social Media Assets / Campaign Design</span></button>
-            <button class="index-row" type="button" data-filter="print" aria-pressed="false"><span class="t">04. print design</span><span class="d">Merchandise / Posters &amp; Flyers / Packaging Design</span></button>
-            <button class="index-row" type="button" data-filter="photo" aria-pressed="false"><span class="t">05. photography</span><span class="d">Product Photography / Portraits / Event Photography</span></button>
+            <button class="index-row" type="button" data-filter="game" aria-pressed="false"><span class="t">01. game asset development</span></button>
+            <button class="index-row" type="button" data-filter="sprite" aria-pressed="false"><span class="t">02. sprite creation</span></button>
+            <button class="index-row" type="button" data-filter="web" aria-pressed="false"><span class="t">03. web development</span></button>
           </div>
           <p class="hint">Select a category to filter the works below. Select it again to show everything.</p>
         </div>
@@ -86,12 +101,12 @@
       <div class="wrap works-body">
         <p class="works-label" id="works-label">all works</p>
         <div class="gallery">
-          <button class="polaroid" type="button" data-category="logo"><div class="pic"><img src="images/logo1.png" alt="Logo for Brand One" onerror="this.remove()"></div><figcaption>Brand One</figcaption></button>
-          <button class="polaroid" type="button" data-category="logo"><div class="pic"><img src="images/logo2.png" alt="Logo for Brand Two" onerror="this.remove()"></div><figcaption>Brand Two</figcaption></button>
-          <button class="polaroid" type="button" data-category="branding"><div class="pic"><img src="images/brand1.png" alt="Brand identity for Brand Three" onerror="this.remove()"></div><figcaption>Brand Three</figcaption></button>
-          <button class="polaroid" type="button" data-category="social"><div class="pic"><img src="images/social1.png" alt="Social media post design" onerror="this.remove()"></div><figcaption>Campaign One</figcaption></button>
-          <button class="polaroid" type="button" data-category="print"><div class="pic"><img src="images/print1.png" alt="Poster design" onerror="this.remove()"></div><figcaption>Poster One</figcaption></button>
-          <button class="polaroid" type="button" data-category="photo"><div class="pic"><img src="images/photo1.jpg" alt="Portrait photograph" onerror="this.remove()"></div><figcaption>Portrait Series</figcaption></button>
+          <button class="polaroid" type="button" data-category="game"><div class="pic"><img src="images/game1.png" alt="Game asset one" onerror="this.remove()"></div><figcaption>Game Asset One</figcaption></button>
+          <button class="polaroid" type="button" data-category="game"><div class="pic"><img src="images/game2.png" alt="Game asset two" onerror="this.remove()"></div><figcaption>Game Asset Two</figcaption></button>
+          <button class="polaroid" type="button" data-category="sprite"><div class="pic"><img src="images/sprite1.png" alt="Sprite one" onerror="this.remove()"></div><figcaption>Sprite One</figcaption></button>
+          <button class="polaroid" type="button" data-category="sprite"><div class="pic"><img src="images/sprite2.png" alt="Sprite two" onerror="this.remove()"></div><figcaption>Sprite Two</figcaption></button>
+          <button class="polaroid" type="button" data-category="web"><div class="pic"><img src="images/web1.png" alt="Website project one" onerror="this.remove()"></div><figcaption>Website One</figcaption></button>
+          <button class="polaroid" type="button" data-category="web"><div class="pic"><img src="images/web2.png" alt="Website project two" onerror="this.remove()"></div><figcaption>Website Two</figcaption></button>
         </div>
         <p class="empty" id="works-empty">Nothing in this category yet.</p>
       </div>
@@ -101,12 +116,29 @@
     <section id="skills">
       <div class="wrap skills-grid">
         <h2 class="script h2">skills</h2>
-        <ul class="skills">
-          <li><span class="badge">Ps</span>Adobe Photoshop</li>
-          <li><span class="badge">Lr</span>Adobe Lightroom</li>
-          <li><span class="badge">Ai</span>Adobe Illustrator <em>(basic)</em></li>
-          <li><span class="badge">Dr</span>DaVinci Resolve <em>(basic)</em></li>
-        </ul>
+        <div class="skill-groups">
+          <div>
+            <h3 class="script h3">creatives</h3>
+            <ul class="skills">
+              <li><span class="badge">Ps</span>Adobe Photoshop <em>(advanced)</em></li>
+              <li><span class="badge">Lr</span>Adobe Lightroom <em>(basic)</em></li>
+              <li><span class="badge">Ai</span>Adobe Illustrator</li>
+              <li><span class="badge">Pr</span>Adobe Premiere</li>
+              <li><span class="badge">Bl</span>Blender</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="script h3">languages</h3>
+            <ul class="skills">
+              <li><span class="badge">Py</span>Python</li>
+              <li><span class="badge">C</span>C</li>
+              <li><span class="badge">Ja</span>Java <em>(basic)</em></li>
+              <li><span class="badge">Sq</span>SQL</li>
+              <li><span class="badge">Ht</span>HTML</li>
+              <li><span class="badge">Dm</span>DreamMaker <em>(basic)</em></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
