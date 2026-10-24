@@ -1,7 +1,6 @@
 (() => {
   "use strict";
 
-  /* ---------- Mobile menu ---------- */
   const menuBtn = document.querySelector(".menu-btn");
   const navList = document.querySelector(".nav-links");
 
@@ -14,7 +13,6 @@
   navList.addEventListener("click", (e) => { if (e.target.closest("a")) setMenu(false); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
 
-  /* ---------- Highlight the menu item for the section in view ---------- */
   const links = [...document.querySelectorAll(".nav-links a")];
   const sections = links.map((a) => document.querySelector(a.getAttribute("href"))).filter(Boolean);
 
@@ -32,7 +30,6 @@
   );
   sections.forEach((s) => spy.observe(s));
 
-  /* ---------- Works: index rows filter the gallery ---------- */
   const rows = [...document.querySelectorAll(".index-row")];
   const cards = [...document.querySelectorAll(".polaroid")];
   const label = document.getElementById("works-label");
@@ -63,7 +60,6 @@
     })
   );
 
-  /* ---------- Works: click an item to enlarge it ---------- */
   const box = document.querySelector(".lightbox");
   const boxImg = box.querySelector("img");
   const boxCap = box.querySelector(".caption");
@@ -81,7 +77,6 @@
   box.querySelector(".close").addEventListener("click", () => box.close());
   box.addEventListener("click", (e) => { if (e.target === box) box.close(); });
 
-  /* ---------- Contact form ---------- */
   const form = document.querySelector("form");
   const status = document.querySelector(".form-status");
 
@@ -101,7 +96,6 @@
       return;
     }
 
-    // Opens the visitor's email app. For a real inbox form, swap this for Formspree.
     const name = form.elements.name.value.trim();
     const subject = encodeURIComponent("Portfolio message from " + name);
     const body = encodeURIComponent(
