@@ -145,6 +145,10 @@ form .btn { justify-self: start; }
 footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding: 1.5rem var(--gutter); font-size: .85rem; color: var(--muted); }
 
 /* ---------- Flowers (decorative) ---------- */
+.index .flower { animation: flower-spin 90s linear infinite; }
+@keyframes flower-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .index .flower { animation: none; } }
+
 section { overflow-x: clip; }
 .hero > div, .wrap { position: relative; z-index: 1; }
 .flower-deco {
