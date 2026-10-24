@@ -125,7 +125,7 @@ dialog.lightbox::backdrop { background: rgba(29, 27, 26, .85); }
 .h3 { font-size: clamp(1.8rem, 3vw, 2.3rem); margin-bottom: 1.2rem; }
 
 /* ---------- Education & experience ---------- */
-.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+.edu-grid { display: grid; grid-template-columns: minmax(0, 560px); justify-content: center; text-align: center; }
 .entry { margin-bottom: 1.8rem; font-size: .95rem; }
 .entry h4 { font: 700 .95rem/1.4 var(--sans); text-transform: uppercase; }
 .entry .when { font-weight: 700; text-transform: uppercase; }
